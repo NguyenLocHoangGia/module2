@@ -1,15 +1,11 @@
+package Circle;
+
 public class Circle {
     private double radius;
     private String color;
 
-    public Circle() {
-        radius = 1.0;
-        color = "red";
-    }
 
-    public Circle(double radius) {
-        this.radius = radius;
-        color = "red";
+    public Circle(){
     }
 
     public Circle(double radius, String color) {
@@ -33,13 +29,19 @@ public class Circle {
         this.color = color;
     }
 
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public double calculateAreaCircle(){
+        return Math.PI * getRadius() * getRadius();
     }
 
     @Override
     public String toString() {
-        return "Circle [radius=" + radius + ", color=" + color + "]";
+        return  "Circle: \n" +
+                "Radius = " + radius + "\n" +
+                "Color = " + color + "\n" +
+                "The Area of Circle = " + calculateAreaCircle() + "\n"
+                ;
     }
-}
 
+
+
+}
